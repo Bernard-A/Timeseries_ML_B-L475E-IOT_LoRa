@@ -6,10 +6,11 @@ From an empty system, you first need to install python-3, git and mercurial:
 
 	sudo apt install -y python3 python3-pip python3-venv git mercurial
 
-Then you need the last version of the gcc-arm compiler to build the firmware:
+Then you need the last version of the gcc-arm compiler to build the firmware and add it to your PATH:
 
 	wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
 	tar xvf gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
+	export PATH=$PATH:${pwd}/gcc-arm-none-eabi-9-2020-q2-update/bin
 
 Create a Python virtual environment:
 
@@ -26,10 +27,6 @@ Import the MBED OS Example LoRaWAN, which is at the base of our project:
 
 	mbed import https://github.com/ARMmbed/mbed-os-example-lorawan
 
-Config mbed to use your ARM compiler
-
-	cd ..
-	mbed config -G ARM_PATH "${pwd}/gcc-arm-none-eabi-9-2020-q2-update/bin"
 
 #mbed import https://github.com/edgeimpulse/example-standalone-inferencing-mbed
 cd compilation
