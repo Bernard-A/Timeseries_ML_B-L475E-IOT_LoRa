@@ -33,7 +33,7 @@ Extract the downloaded file in the mbed-os-example-lorawan folder. For me the do
 
 The following part consists in editing the main.cpp file in order to change the transmission function (send_message) and allow the algorithm to classify data before transmission.
 
-My main.cpp is available here, and the modifications that were made to the send_message function are also available in a dedicated file here.
+My main.cpp is available [here](tests_lora_ei/main.cpp), and the modifications that were made to the send_message function are also available in a dedicated file [here](tests_lora_ei/send_message).
 
 Once your main.cpp file is edited, your last task is to edit your LoRa configuration file for your device to send its decision on a LoRaWAN network.
 
