@@ -29,7 +29,8 @@ Import the MBED OS Example LoRaWAN, which is at the base of our project:
 
 Go to your EdgeImpulse account and download the parameters (edgeimpulse-sdk, model-parameters and tflite-model) necessary to run your ML model (for consistency with EdgeImpulse, we will call it impulse in further documentation)
 
-Extract the downloaded file in the mbed-os-example-lorawan folder. For me the downloaded file is ei-bernard-project-1-deployment-zip-123456789.zip. Yours probably has the same structure.
+Extract the downloaded file in the mbed-os-example-lorawan folder.
+In our case, the downloaded file is ei-bernard-project-1-deployment-zip-123456789.zip. Yours probably has the same structure.
 
 The following part consists in editing the main.cpp file in order to change the transmission function (send_message) and allow the algorithm to classify data before transmission.
 
