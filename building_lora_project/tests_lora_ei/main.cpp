@@ -97,19 +97,19 @@ static lorawan_app_callbacks_t callbacks;
  */
 int main(void)
 {
-    // setup tracing
-    setup_trace();
+	// setup tracing
+	setup_trace();
 
-    // stores the status of a call to LoRaWAN protocol
-    lorawan_status_t retcode;
+	// stores the status of a call to LoRaWAN protocol
+	lorawan_status_t retcode;
 
-    // Initialize LoRaWAN stack
-    if (lorawan.initialize(&ev_queue) != LORAWAN_STATUS_OK) {
-        printf("\r\n LoRa initialization failed! \r\n");
-        return -1;
-    }
+	// Initialize LoRaWAN stack
+	if (lorawan.initialize(&ev_queue) != LORAWAN_STATUS_OK) {
+		printf("\r\n LoRa initialization failed! \r\n");
+		return -1;
+	}
 
-    printf("\r\n Mbed LoRaWANStack initialized \r\n");
+	printf("\r\n Mbed LoRaWANStack initialized \r\n");
 
     // prepare application callbacks
     callbacks.events = mbed::callback(lora_event_handler);
